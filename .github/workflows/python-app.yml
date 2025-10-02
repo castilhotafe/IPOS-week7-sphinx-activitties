@@ -44,3 +44,9 @@ jobs:
       with:
           coverageFile: coverage.xml
           token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload coverage to GitHub summary
+      if: ${{ always() }}
+      run: |
+        echo '### Code Coverage' >> $GITHUB_STEP_SUMMARY
+        echo '' >> $GITHUB_STEP_SUMMARY
+        tail -n 10 coverage.xml >> $GITHUB_STEP_SUMMARY
