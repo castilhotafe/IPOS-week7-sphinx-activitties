@@ -11,8 +11,8 @@ import os
 import sys
 from pathlib import Path
 
-# Adiciona a pasta 'activities' ao sys.path
-sys.path.insert(0, os.path.abspath('..'))
+
+sys.path.insert(0, os.path.abspath('../src'))
 
 
 project = 'Sphinx tutorial - tac_tac_bug_toe - task_bug'

@@ -553,4 +553,10 @@ Temporary Items
 .apdisk
 
 ../.idea
-_build
+_build/
+.venv/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.vscode/
