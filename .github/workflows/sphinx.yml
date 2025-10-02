@@ -24,12 +24,6 @@ jobs:
         run: |
           sphinx-build doc-example-activities _build
 
-      - name: Show Coverage Summary
-        run: |
-          coverage report
-          coverage_percent=$(coverage report | tail -1 | awk '{print $NF}')
-          echo "::notice title=Coverage Report::Test coverage is $coverage_percent"
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
