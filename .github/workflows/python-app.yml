@@ -24,12 +24,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest pytest-cov
 
-      - name: Run tests and generate coverage
-        run: |
-          pytest --cov-report=xml --cov=. > /dev/null
-
-      - name: Upload coverage report
-        uses: orgoro/coverage@v3.2
-        with:
-          coverageFile: coverage.xml
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run tests
+        run: pytest
