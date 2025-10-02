@@ -43,6 +43,7 @@ html_theme = 'sphinx_rtd_theme'
 autodoc_typehints = "description"
 
 
+
 # Napoleon settings
 napoleon_google_docstring = True
 napoleon_numpy_docstring = True
