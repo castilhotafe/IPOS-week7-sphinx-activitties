@@ -2,6 +2,7 @@ import pytest
 from src.task_bug import add_task
 from src.task_bug import mark_task_completed
 from src.task_bug import delete_task
+from src.task_bug import sort_tasks
 
 def test_add_regular_task():
     task_list = []
@@ -47,3 +48,18 @@ def test_delete_invalid_index():
     tasks = [("Study", False), ("Read", False)]
     delete_task(tasks, 5)
     assert tasks == [("Study", False), ("Read", False)]
+
+
+def test_sort_tasks():
+    tasks = [("Walk dog", False), ("Do homework", True), ("Clean room", False)]
+    tasks_copy = tasks.copy()
+    sort_tasks(tasks_copy)
+    assert tasks_copy == [("Clean room", False), ("Do homework", True), ("Walk dog", False)]
+
+
+def test_sort_tasks_empty_list():
+    empty = []
+    sort_tasks(empty)
+    assert empty == []
+
+
