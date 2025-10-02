@@ -1,7 +1,7 @@
 import pytest
 from src.task_bug import add_task
 from src.task_bug import mark_task_completed
-
+from src.task_bug import delete_task
 
 def test_add_regular_task():
     task_list = []
@@ -35,3 +35,15 @@ def test_invalid_index():
     task_list = [("Call mom", False)]
     mark_task_completed(task_list, 5)
     assert task_list == [("Call mom", False)]
+
+
+def test_delete_valid_index():
+    tasks = [("Study", False), ("Exercise", False), ("Read", False)]
+    tasks_copy = tasks.copy()
+    delete_task(tasks_copy, 1)
+    assert tasks_copy == [("Study", False), ("Read", False)]
+
+def test_delete_invalid_index():
+    tasks = [("Study", False), ("Read", False)]
+    delete_task(tasks, 5)
+    assert tasks == [("Study", False), ("Read", False)]
