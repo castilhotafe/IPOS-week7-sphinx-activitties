@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>task_bug module &mdash; Sphinx tutorial - tac_tac_bug_toe - task_bug 0/0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c698b07d"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Some feature" href="some-feature.html" />
+    <link rel="prev" title="tac_tac_bug_toe module" href="tac_tac_bug_toe.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Sphinx tutorial - tac_tac_bug_toe - task_bug
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tac_tac_bug_toe.html">tac_tac_bug_toe module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">task_bug module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#task_bug.add_task"><code class="docutils literal notranslate"><span class="pre">add_task()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task_bug.binary_search"><code class="docutils literal notranslate"><span class="pre">binary_search()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task_bug.delete_task"><code class="docutils literal notranslate"><span class="pre">delete_task()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task_bug.list_tasks"><code class="docutils literal notranslate"><span class="pre">list_tasks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task_bug.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task_bug.mark_task_completed"><code class="docutils literal notranslate"><span class="pre">mark_task_completed()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task_bug.sort_tasks"><code class="docutils literal notranslate"><span class="pre">sort_tasks()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="some-feature.html">Some feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="another-feature.html">Another Feature</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sphinx tutorial - tac_tac_bug_toe - task_bug</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Modules</a></li>
+      <li class="breadcrumb-item active">task_bug module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/task_bug.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-task_bug">
+<span id="task-bug-module"></span><h1>task_bug module<a class="headerlink" href="#module-task_bug" title="Link to this heading"></a></h1>
+<p>A buggy Task Manager that provides an opportunity to debug code by both reasoning about it and stepping through using pdb.</p>
+<p>The program has a number of bugs that are introduced one at a time.</p>
+<p>The goal is to find and fix the bugs.</p>
+<p>Ensure you step through this program in pdb only to understand how the program works and to find the bugs.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="task_bug.add_task">
+<span class="sig-prename descclassname"><span class="pre">task_bug.</span></span><span class="sig-name descname"><span class="pre">add_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_list=&lt;class</span> <span class="pre">'list'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task=&lt;class</span> <span class="pre">'str'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#task_bug.add_task" title="Link to this definition"></a></dt>
+<dd><p>Adds a new task to the list if the input is not empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_list</strong> (<em>list</em>) – The list where the new task will be appended.</p></li>
+<li><p><strong>task</strong> (<em>str</em>) – The task description to be added.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Returns nothing. Prints a cancellation message if input is empty.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_tasks</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">add_task</span><span class="p">(</span><span class="n">my_tasks</span><span class="p">,</span> <span class="s2">&quot;Buy milk&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_tasks</span>
+<span class="go">[(&#39;Buy milk&#39;, False)]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_tasks</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">add_task</span><span class="p">(</span><span class="n">my_tasks</span><span class="p">,</span> <span class="s2">&quot;   Learn Python   &quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_tasks</span>
+<span class="go">[(&#39;Learn Python&#39;, False)]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_tasks</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">add_task</span><span class="p">(</span><span class="n">my_tasks</span><span class="p">,</span> <span class="s2">&quot;    &quot;</span><span class="p">)</span>
+<span class="go">Task addition cancelled.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_tasks</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="task_bug.binary_search">
+<span class="sig-prename descclassname"><span class="pre">task_bug.</span></span><span class="sig-name descname"><span class="pre">binary_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_to_find</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#task_bug.binary_search" title="Link to this definition"></a></dt>
+<dd><p>Perform a binary search to find the index of a task in the sorted list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_list</strong> (<em>list</em><em> of </em><em>tuple</em>) – List of tasks (tuples), where each tuple contains the task description and a completion flag.</p></li>
+<li><p><strong>task_to_find</strong> (<em>str</em>) – The task description to search for.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A message indicating the index of the found task, or that it was not found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test5</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Walk dog&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Do homework&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Clean room&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test6</span> <span class="o">=</span> <span class="n">tasks_test5</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binary_search</span><span class="p">(</span><span class="n">tasks_test6</span><span class="p">,</span> <span class="s2">&quot;Do homework&quot;</span><span class="p">)</span>
+<span class="go">&quot;Task &#39;Do homework&#39; found at index 1.&quot;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test7</span> <span class="o">=</span> <span class="n">tasks_test5</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binary_search</span><span class="p">(</span><span class="n">tasks_test7</span><span class="p">,</span> <span class="s2">&quot;Clean room&quot;</span><span class="p">)</span>
+<span class="go">&quot;Task &#39;Clean room&#39; found at index 2.&quot;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test8</span> <span class="o">=</span> <span class="n">tasks_test5</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binary_search</span><span class="p">(</span><span class="n">tasks_test8</span><span class="p">,</span> <span class="s2">&quot;Cook dinner&quot;</span><span class="p">)</span>
+<span class="go">&quot;Task &#39;Cook dinner&#39; not found.&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="task_bug.delete_task">
+<span class="sig-prename descclassname"><span class="pre">task_bug.</span></span><span class="sig-name descname"><span class="pre">delete_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#task_bug.delete_task" title="Link to this definition"></a></dt>
+<dd><p>Delete a task from the task list at the specified index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_list</strong> (<em>list</em><em> of </em><em>tuple</em>) – The list containing tasks as (description, completed) tuples.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – The position of the task to be deleted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>This function modifies the task list in-place and prints the deleted task description.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_original</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Study&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Exercise&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Read&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_copy</span> <span class="o">=</span> <span class="n">tasks_original</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">delete_task</span><span class="p">(</span><span class="n">tasks_copy</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">Task &quot;Exercise&quot; deleted.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_copy</span>
+<span class="go">[(&#39;Study&#39;, False), (&#39;Read&#39;, False)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_original</span>
+<span class="go">[(&#39;Study&#39;, False), (&#39;Exercise&#39;, False), (&#39;Read&#39;, False)]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">delete_task</span><span class="p">(</span><span class="n">tasks_copy</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">Invalid task index.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_copy</span>
+<span class="go">[(&#39;Study&#39;, False), (&#39;Read&#39;, False)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="task_bug.list_tasks">
+<span class="sig-prename descclassname"><span class="pre">task_bug.</span></span><span class="sig-name descname"><span class="pre">list_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#task_bug.list_tasks" title="Link to this definition"></a></dt>
+<dd><p>Displays all tasks in the task list with their completion status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task_list</strong> (<em>list</em><em> of </em><em>tuple</em>) – A list of tasks, where each task is a tuple (description: str, completed: bool).
+The description is the task name, and completed indicates if the task is done.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>This function only prints the list of tasks to the console.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="task_bug.main">
+<span class="sig-prename descclassname"><span class="pre">task_bug.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#task_bug.main" title="Link to this definition"></a></dt>
+<dd><p>Entry point of the task management application.</p>
+<p>This function displays a menu to the user, handles input,
+and calls the appropriate functions to add, delete, list,
+complete, or sort tasks in a task list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="task_bug.mark_task_completed">
+<span class="sig-prename descclassname"><span class="pre">task_bug.</span></span><span class="sig-name descname"><span class="pre">mark_task_completed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#task_bug.mark_task_completed" title="Link to this definition"></a></dt>
+<dd><p>Marks a task as completed in the task list if the index is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_list</strong> (<em>list</em><em> of </em><em>tuple</em>) – The list of tasks, where each task is represented as a tuple (task_description, is_completed).</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – The index of the task to be marked as completed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>This function updates the task in-place and prints a message indicating completion or an error if the index is invalid.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test1</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Task 1&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Task 2&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mark_task_completed</span><span class="p">(</span><span class="n">tasks_test1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">task Task 1 completed</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test1</span>
+<span class="go">[(&#39;Task 1&#39;, True), (&#39;Task 2&#39;, False)]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test2</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Task A&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Task B&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mark_task_completed</span><span class="p">(</span><span class="n">tasks_test2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">task Task B completed</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test2</span>
+<span class="go">[(&#39;Task A&#39;, False), (&#39;Task B&#39;, True)]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test3</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Task X&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Task Y&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mark_task_completed</span><span class="p">(</span><span class="n">tasks_test3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">Invalid task index.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test3</span>
+<span class="go">[(&#39;Task X&#39;, True), (&#39;Task Y&#39;, False)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="task_bug.sort_tasks">
+<span class="sig-prename descclassname"><span class="pre">task_bug.</span></span><span class="sig-name descname"><span class="pre">sort_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#task_bug.sort_tasks" title="Link to this definition"></a></dt>
+<dd><p>Sorts the task list alphabetically by task description.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task_list</strong> (<em>list</em><em> of </em><em>tuple</em>) – A list of tasks, where each task is a tuple (description: str, completed: bool).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The original list is sorted in place. The sorted list is printed to the console.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_original</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Walk dog&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Do homework&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Clean room&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test</span> <span class="o">=</span> <span class="n">tasks_original</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sort_tasks</span><span class="p">(</span><span class="n">tasks_test</span><span class="p">)</span>
+<span class="go">[(&#39;Clean room&#39;, False), (&#39;Do homework&#39;, True), (&#39;Walk dog&#39;, False)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_test</span>
+<span class="go">[(&#39;Clean room&#39;, False), (&#39;Do homework&#39;, True), (&#39;Walk dog&#39;, False)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tasks_original</span>
+<span class="go">[(&#39;Walk dog&#39;, False), (&#39;Do homework&#39;, True), (&#39;Clean room&#39;, False)]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">empty_test</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sort_tasks</span><span class="p">(</span><span class="n">empty_test</span><span class="p">)</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tac_tac_bug_toe.html" class="btn btn-neutral float-left" title="tac_tac_bug_toe module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="some-feature.html" class="btn btn-neutral float-right" title="Some feature" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Marcos Castilho.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
