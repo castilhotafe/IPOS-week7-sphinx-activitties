@@ -3,6 +3,7 @@ from src.task_bug import add_task
 from src.task_bug import mark_task_completed
 from src.task_bug import delete_task
 from src.task_bug import sort_tasks
+from src.task_bug import binary_search
 
 def test_add_regular_task():
     task_list = []
@@ -63,3 +64,17 @@ def test_sort_tasks_empty_list():
     assert empty == []
 
 
+def test_binary_search_found_middle():
+    tasks = [("Clean room", False), ("Do homework", True), ("Walk dog", False)]
+    message = binary_search(tasks, "Do homework")
+    assert message == "Task 'Do homework' found at index 1."
+
+def test_binary_search_found_first():
+    tasks = [("Clean room", False), ("Do homework", True), ("Walk dog", False)]
+    message = binary_search(tasks, "Clean room")
+    assert message == "Task 'Clean room' found at index 0."
+
+def test_binary_search_not_found():
+    tasks = [("Clean room", False), ("Do homework", True), ("Walk dog", False)]
+    message = binary_search(tasks, "Cook dinner")
+    assert message == "Task 'Cook dinner' not found."
